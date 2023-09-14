@@ -21,7 +21,7 @@
       "git add"
     ],
     "src/**/*.{scss,less}": [
-      "npx stylelint"
+      "npx stylelint '**/*.scss' "
     ],
     "src/**/{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
       "npx prettier --config .prettierrc --write--parser json",
