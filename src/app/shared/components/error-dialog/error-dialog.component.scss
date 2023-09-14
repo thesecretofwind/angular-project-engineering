@@ -1,14 +1,14 @@
 [mat-dialog-title] {
-    padding: 10px 24px;
-    margin: -24px 24px 0 -24px !important;
-    cursor: move;
+  margin: -24px 24px 0 -24px !important;
+  padding: 10px 24px;
+  cursor: move;
 }
 
 .mat-dialog-content {
-    min-height: 130px;
+  min-height: 130px;
 }
 
 
 .mat-dialog-actions {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
