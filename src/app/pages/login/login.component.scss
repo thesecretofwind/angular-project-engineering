@@ -1,0 +1,17 @@
+.container {
+    min-height: 100%;
+    background: url(../../../assets/bg-transparent.png) no-repeat;
+
+    ::ng-deep .mat-form-field-flex {
+        padding-top: 0;
+    }
+}
+
+.form-container {
+    max-width: 360px;
+}
+
+.error-info {
+    margin-bottom: 10px;
+    color: red;
+}

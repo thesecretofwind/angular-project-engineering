@@ -1,0 +1,78 @@
+{
+  "name": "my-app",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "prepare": "npm install husky -D & husky install",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.ts": [
+        "npx eslint --fix",
+        "npx prettier --config .prettierrc --write",
+        "git add"
+      ],
+      "src/**/*.{scss,less,styl,html}": [
+        "npx prettier --config .prettierrc --write",
+        "git add"
+      ],
+      "src/**/{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+        "npx prettier --config .prettierrc --write--parser json",
+        "git add"
+      ],
+      "package.json": [
+        "npx prettier --config .prettierrc --write",
+        "git add"
+      ],
+      "*.md": [
+        "npx prettier --config .prettierrc --write",
+        "git add"
+      ]
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~13.0.0",
+    "@angular/cdk": "^13.1.1",
+    "@angular/common": "~13.0.0",
+    "@angular/compiler": "~13.0.0",
+    "@angular/core": "~13.0.0",
+    "@angular/flex-layout": "^13.0.0-beta.36",
+    "@angular/forms": "~13.0.0",
+    "@angular/material": "^13.1.1",
+    "@angular/platform-browser": "~13.0.0",
+    "@angular/platform-browser-dynamic": "~13.0.0",
+    "@angular/router": "~13.0.0",
+    "@angular/service-worker": "^13.1.1",
+    "@vm0100/ngmock": "^1.0.10",
+    "ngx-progressbar": "^6.1.1",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.0.4",
+    "@angular/cli": "~13.0.4",
+    "@angular/compiler-cli": "~13.0.0",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "husky": "^8.0.3",
+    "jasmine-core": "~3.10.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "typescript": "~4.4.3"
+  }
+}
